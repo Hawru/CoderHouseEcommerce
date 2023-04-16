@@ -20,11 +20,12 @@ const ItemListContainer = ({greeting}) => {
                 console.log(error);
             })
     }, [categoryId])
-    
+
     return(
         <div>
             <h1>{greeting}</h1>
-            <ItemList products={products}/>
+            {products.length > 0 ? <ItemList products={products}/> : <h2>No hay productos</h2>}
+            
         </div>
     )
 }
